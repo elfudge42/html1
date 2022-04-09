@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		
+        <!-- Meta tags -->
+		
+		<!-- Define the character set. -->
+		<meta charset="UTF-8">
+		
+		<!-- Set the keywords -->
+		<meta name="keywords" content="enter keywords here">
+		
+		<!-- Description -->
+		<meta name="description" content="enter description here">
+		
+		<!-- Viewport settings -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		
+		<!-- Author -->
+		<meta name="author" content="Erik Long">
+	
+		<!-- Title -->
+		<title>Grid Column 1 - Lab 3</title>
+
+        <style>
+
+        	.grid-container {
+				display: grid;
+				grid-template-columns: 60px 150px 80px 20px;
+				grid-template-rows: auto auto;
+				/*grid-gap is x and y*/
+				grid-gap: 60px 30px;
+				/*background-color: #54defd;*/
+				padding: 30px;
+			}
+
+			.grid-container > div {
+				background-color: #00bd9d;
+				text-align: center;
+				padding: 20px 0;
+				font-size: 30px;
+				color: black;
+				font-weight: bold;
+				box-shadow: -10px -10px #8bd7d2;
+			}
+
+			@media only screen and (max-width:  600px) {
+				body {
+					background-image: url(images/fear.jpg);
+	            	background-repeat: no-repeat;
+	                background-size: cover;
+				}
+			}
+
+        </style>
+
+	</head>
+
+	<body>
+
+		<div class="grid-container">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+		</div>
+
+		<footer>
+			
+		</footer>
+
+	</body>
+
+</html>

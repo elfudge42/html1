@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		
+        <!-- Meta tags -->
+		
+		<!-- Define the character set. -->
+		<meta charset="UTF-8">
+		
+		<!-- Set the keywords -->
+		<meta name="keywords" content="enter keywords here">
+		
+		<!-- Description -->
+		<meta name="description" content="enter description here">
+		
+		<!-- Viewport settings -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		
+		<!-- Author -->
+		<meta name="author" content="Erik Long">
+	
+		<!-- Title -->
+		<title>Grid Item - Lab 3</title>
+
+        <style>
+
+			body {
+				background-color: darkgray;
+			}
+
+        	.grid-container {
+				display: grid;
+				gap: 10px;
+				background-color: #226666;
+				margin: 30px;
+				padding: 10px;
+			}
+
+			.grid-item {
+				background-color: white;
+				text-align: center;
+				padding: 10px;
+			}
+
+			.item1 {
+				grid-column: 1 / span 2;
+				grid-row: 1;
+			}
+
+			.item2 {
+				grid-column: 3;
+				grid-row: 1 / span 2;
+				padding: 200px 0 0 0;
+			}
+
+			.item4 {
+				border: solid #226666 10px;
+				border-radius: 150px;
+			}
+
+			.item5 {
+				grid-column: 1 / span 3;
+				grid-row: 3;
+			}
+
+			@media only screen and (max-width:  600px) {
+				body {
+					background-color: blue;
+				}
+			}
+
+        </style>
+
+	</head>
+
+	<body>
+
+		<div class="grid-container">
+			<div class="grid-item item1"><img src="images/pooltable.jpg" height=250px></div>
+			<div class="grid-item item2"><img src="images/billiard_balls.jpg" height=150px></div>
+			<div class="grid-item item3"><img src="images/pool_chalk.jpg" width=200px></div>
+			<div class="grid-item item4"><img src="images/poolball_01.png" width=150px></div>
+			<div class="grid-item item5"><img src="images/pool_cue.jpg" width=800px></div>
+		</div>
+
+		<footer>
+			
+		</footer>
+
+	</body>
+
+</html>

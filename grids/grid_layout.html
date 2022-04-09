@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		
+        <!-- Meta tags -->
+		
+		<!-- Define the character set. -->
+		<meta charset="UTF-8">
+		
+		<!-- Set the keywords -->
+		<meta name="keywords" content="enter keywords here">
+		
+		<!-- Description -->
+		<meta name="description" content="enter description here">
+		
+		<!-- Viewport settings -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		
+		<!-- Author -->
+		<meta name="author" content="Erik Long">
+	
+		<!-- Title -->
+		<title>Grid Layout - Lab 3</title>
+
+        <style>
+
+			.item1 { grid-area: header; }
+			.item2 { grid-area: menu; }
+			.item3 { grid-area: main; }
+			.item4 { grid-area: right; }
+			.item5 { grid-area: footer; }
+
+            .grid-container {
+            	display: grid;
+			    grid-template-areas:
+					'header header header header header header header'
+					'menu main main main main right right'
+					'menu footer footer footer footer footer footer';
+				gap: 10px;
+				background-color: #2196f3;
+				padding: 10px;
+            }
+
+            /*styles any divs in the div container*/
+            .grid-container > div {
+            	background-color: rgba(255, 255, 255, 0.8);
+            	text-align: center;
+            	padding: 20px 0px;
+            	font-size: 30px;
+            }
+
+            .item1 {
+            	background-image: url(images/sky_background.jpg);
+            	color: white;
+            	text-align: left;
+            	padding: 20px;
+            	background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .item2 {
+            	background-image: url(images/beachball.jpg);
+            	background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .item3 {
+            	background-image: url(images/surf_background.jpg);
+            	background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .item4 {
+            	background-image: url(images/surfboard.jpg);
+            	background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .item5 {
+            	background-image: url(images/sand_background.jpg);
+            	background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            img {
+            	width: 100%;
+            }
+
+			@media only screen and (max-width:  600px) {
+				body {
+					background-color: blue;
+				}
+
+				h1, p {
+					color: white;
+				}
+			}
+
+        </style>
+
+	</head>
+
+	<body>
+
+		<h1>Grid Layout</h1>
+
+		<p>This grid layout contains seven columns and three rows:</p>
+
+		<div class="grid-container">
+			<div class="item1" alt="image of blue sky and clouds">Sky</div>
+			<div class="item2" alt="image of beach ball on a beach">Fun</div>
+			<div class="item3" alt="image of ocean">Ocean</div>
+			<div class="item4" alt="image of surfboard on a beach">More Fun</div>
+			<div class="item5" alt="image of beach">Beach</div>
+		</div>
+
+		<footer>
+			
+		</footer>
+
+	</body>
+
+</html>

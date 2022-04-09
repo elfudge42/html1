@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		
+        <!-- Meta tags -->
+		
+		<!-- Define the character set. -->
+		<meta charset="UTF-8">
+		
+		<!-- Set the keywords -->
+		<meta name="keywords" content="enter keywords here">
+		
+		<!-- Description -->
+		<meta name="description" content="enter description here">
+		
+		<!-- Viewport settings -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		
+		<!-- Author -->
+		<meta name="author" content="Erik Long">
+	
+		<!-- Title -->
+		<title>Grid Align - Lab 3</title>
+
+        <style>
+
+        	.grid-container {
+				display: grid;
+				height: 400px;
+				align-content: center;
+				grid-template-columns: auto auto auto;
+				grid-gap: 10px;
+				background-color: #226666;
+				padding: 10px;
+			}
+
+			body {
+				background-color: darkgray;
+			}
+
+			.grid-container > div {
+				background-color: #aa3939;
+				text-align: center;
+				padding: 20px 0;
+				font-size: 90px;
+				color: #7b9f35;
+				font-weight: bold;
+				border: solid yellow 10px;
+				border-radius: 30px;
+			}
+
+			@media only screen and (max-width:  600px) {
+				body {
+					background-color: blue;
+				}
+			}
+
+        </style>
+
+	</head>
+
+	<body>
+
+		<div class="grid-container">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+		</div>
+
+		<footer>
+			
+		</footer>
+
+	</body>
+
+</html>

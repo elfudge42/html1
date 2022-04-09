@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		
+        <!-- Meta tags -->
+		
+		<!-- Define the character set. -->
+		<meta charset="UTF-8">
+		
+		<!-- Set the keywords -->
+		<meta name="keywords" content="enter keywords here">
+		
+		<!-- Description -->
+		<meta name="description" content="enter description here">
+		
+		<!-- Viewport settings -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		
+		<!-- Author -->
+		<meta name="author" content="Erik Long">
+	
+		<!-- Title -->
+		<title>Grid Container - Lab 3</title>
+
+        <style>
+
+        	.grid-container {
+				display: grid;
+				grid-template-columns: auto auto auto auto;
+				background-color: #89a236;
+				padding: 10px;
+			}
+
+			.grid-item {
+				background-image: conic-gradient(#aaa439, #7c2969, #393276, #393276, #7c2969, #aaa439);
+				border: 1px solid rgba(0, 0, 0, 0.8);
+				padding: 20px;
+				font-size: 30px;
+				text-align: center;
+				color: lightgrey;
+			}
+
+			@media only screen and (max-width:  600px) {
+				body {
+					background-color: blue;
+				}
+			}
+
+        </style>
+
+	</head>
+
+	<body>
+
+		<div class="grid-container">
+			<div class="grid-item">1</div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item">7</div>
+			<div class="grid-item">8</div>
+		</div>
+
+		<footer>
+			
+		</footer>
+
+	</body>
+
+</html>
