@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		
+        <!-- Meta tags -->
+		
+		<!-- Define the character set. -->
+		<meta charset="UTF-8">
+		
+		<!-- Set the keywords -->
+		<meta name="keywords" content="fix, fixing, right to repair, repairing, right-to-repair">
+		
+		<!-- Description -->
+		<meta name="description" content="final project - page 3/4: Example Fixes Page">
+		
+		<!-- Viewport settings -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		
+		<!-- Author -->
+		<meta name="author" content="Erik Long">
+	
+		<!-- Title -->
+		<title>Fixing Things - Example Fixes</title>
+
+		<!-- favicon -->
+		<link rel="icon" type="image/x-icon" href="images/hammer_and_spanner.png">
+		<!-- "Simple spanner and hammer isolated on white background Icon for apps and websites" by Eugene B-sov -->
+
+        <!-- link to external style sheet for page formatting -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- link to external style sheet for nav bar icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- colors: -->
+			<!-- http://paletton.com/#uid=62P1q0kf8nd6bzvaArSiqiGnDfd -->
+			<!-- primary -->
+				<!-- green: #4E944E = rgb( 78,148, 78) -->
+			<!-- ancillary -->
+				<!-- blue/purple: #574A7F = rgb( 87, 74,127), -->
+				<!-- tan/yellow: #B9AA62 = rgb(185,170, 98), -->
+				<!-- rose: #B96262 = rgb(185, 98, 98)*/ -->
+				<!-- background (maybe gray) - I found this -->
+				<!-- dark blue: #2A1D53 = rgb( 42, 29, 83) -->
+
+        <style>
+
+			/*Call the font family for the page*/
+			@font-face {
+				font-family: myFont;
+				src: url(fonts/KeepCalm-Medium.ttf);
+			}
+
+			.flex-container {
+				display: flex;
+				flex-wrap: wrap;
+				margin-left: 25%;
+			}
+
+			.flex-container > div {
+				margin: 5px;
+				padding: 10px;
+				text-align: center;
+				max-width: 500px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			figure > img {
+				width: 100%;
+				/*center the images in the flex boxes*/
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: -15px;
+			}
+
+			.heading {
+				margin-left: 25%;
+			}
+
+			h3 {
+				font-size: 20px;
+			}
+
+			.myImg {
+				border-radius: 5px;
+				cursor: pointer;
+				transition: 0.3s;
+			}
+
+			.myImg:hover {opacity: 0.7;}
+
+			/* The Modal (background) */
+			.modal {
+				display: none; /* Hidden by default */
+				position: fixed; /* Stay in place */
+				z-index: 1; /* Sit on top */
+				padding-top: 100px; /* Location of the box */
+				left: 0;
+				top: 0;
+				width: 100%; /* Full width */
+				height: 100%; /* Full height */
+				overflow: auto; /* Enable scroll if needed */
+				background-color: rgb(0,0,0); /* Fallback color */
+				background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+			}
+
+			/* Modal Content (image) */
+			.modal-content {
+				margin: auto;
+				display: block;
+				width: 80%;
+				max-width: 600px;
+			}
+
+			/* Caption of Modal Image */
+			#caption {
+				margin: auto;
+				display: block;
+				width: 80%;
+				max-width: 600px;
+				text-align: center;
+				color: #ccc;
+				padding: 10px 0;
+				height: 150px;
+			}
+
+			/* Add Animation */
+			.modal-content, #caption {  
+				-webkit-animation-name: zoom;
+				-webkit-animation-duration: 0.6s;
+				animation-name: zoom;
+				animation-duration: 0.6s;
+			}
+
+			@-webkit-keyframes zoom {
+				from {-webkit-transform:scale(0)} 
+				to {-webkit-transform:scale(1)}
+			}
+
+			@keyframes zoom {
+				from {transform:scale(0)} 
+				to {transform:scale(1)}
+			}
+
+			/* The Close Button */
+			.close {
+				position: absolute;
+				top: 60px;
+				right: 5px;
+				color: #f1f1f1;
+				font-size: 40px;
+				font-weight: bold;
+				transition: 0.3s;
+			}
+
+			.close:hover,
+				.close:focus {
+				color: #bbb;
+				text-decoration: none;
+				cursor: pointer;
+			}
+
+			/* 100% Image Width on Smaller Screens */
+			@media only screen and (max-width: 600px){
+				.modal-content {
+				width: 100%;
+				}
+			}
+
+			/* Responsive layout for side nav */
+			@media screen and (max-width: 768px) {
+				/* Remove side nav once the media query is active*/
+				.flex-container {
+				    margin-left: 0%;
+				}
+
+				.heading {
+					margin-left: 0%;
+				}
+	    	}
+
+        </style>
+
+	</head>
+
+	<body>
+
+		<header>
+
+			<!-- Logo container -->
+			<div class="logo-container">
+	        	<img src="images/long-logo.png" alt="LONG Enterprises logo">
+	        </div>
+
+	        <!-- Title text container -->
+	        <div class="title-container">
+	            <h1>Example Fixes</h1>        	
+	        </div>
+
+	        <!-- banner -->
+	        <img src="images/banner-tools.jpg" alt="peg-board full of tools">
+
+		</header>
+
+			<!-- Nav bar content and code for mobile -->
+			<div class="navbar" id="myTopnav">
+				<!-- This places the house icon for home -->
+				<a href="index.html">
+					<i class="fa fa-home"></i>
+				</a>
+				<a href="resources.html">Resources</a>
+				<a class="active" href="examples.html">Examples</a>
+				<a href="about.html">About</a>
+				
+				<!-- This places the "hamburger" icon and opens the hamburger drop-down on click -->
+				<a href="javascript:void(0);" class="icon" onclick="navBurgerFunction()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
+
+		<section>
+
+			<!-- Side nav bar -->
+			<ul class="sidenav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="resources.html">Resources</a></li>
+				<li><a class="active" href="examples.html">Examples</a></li>
+				<li><a href="about.html">About</a></li>
+		    </ul>
+
+			<div class="heading">
+				<h2>Fixed Items</h2>
+				<p>Below are examples of items that were broken and are now repaired.  Click on each image for more detail.</p>
+		    </div>
+
+			<div class="flex-container">
+
+				<div>
+					<figure>
+						<a href="content/coffee-maker.pdf" target="_blank">
+						<img src="images/examples/coffee-maker.jpg" alt="image coffee maker"></a>
+						<h3>Coffee Maker</h3>
+					</figure>
+				</div>
+
+				<div>
+					<figure>
+						<a href="content/floor-steamer.pdf" target="_blank">
+						<img src="images/examples/floor-steamer.jpg" alt="image of floor steamer"></a>
+						<h3>Floor Steamer</h3>
+					</figure>
+				</div>
+
+				<div>
+					<figure>
+						<a href="content/xbox-one-controller.pdf" target="_blank">
+						<img src="images/examples/xbox-one-controller.jpg" alt="image of xbox one controller"></a>
+						<h3>X-Box One Controller</h3>
+					</figure>
+				</div>
+
+				<div>
+					<figure>
+						<img class="myImg" src="images/examples/slipper.jpg" alt="A hole in a slipper fixed with a sewn patch.">
+						<h3>Slipper</h3>
+					</figure>
+
+					<!-- Code for makign the above image pop out when clicked -->
+					<div id="myModal" class="modal">
+						<span class="close">&times;</span>
+						<img class="modal-content" id="img01">
+						<div id="caption"></div>
+					</div>
+				</div>
+
+				<div>
+					<figure>
+						<img class="myImg" src="images/examples/shirt.jpg" alt="Holes in a shirt sewn closed.">
+						<h3>T-Shirt</h3>
+					</figure>
+
+					<!-- Code for makign the above image pop out when clicked -->
+					<div id="myModal" class="modal">
+						<span class="close">&times;</span>
+						<img class="modal-content" id="img01">
+						<div id="caption"></div>
+					</div>
+				</div>
+
+				<div>
+					<figure>
+						<a href="content/boombox.pdf" target="_blank">
+						<img src="images/examples/boombox.jpg" alt="image of boombox"></a>
+						<h3>Boombox</h3>
+					</figure>
+				</div>
+
+				<div>
+					<figure>
+						<a href="content/mixer.pdf" target="_blank">
+						<img src="images/examples/mixer.jpg" alt="image of hand mixer"></a>
+						<h3>Braun Mixer</h3>
+					</figure>
+				</div>
+
+				<div>
+					<figure>
+						<img class="myImg" src="images/examples/garbage-can.jpg" alt="Garbage can lid handle fixed with shaped metal banding and pop-rivets.">
+						<h3>Garbage Can Lid Handle</h3>
+					</figure>
+
+					<!-- Code for makign the above image pop out when clicked -->
+					<div id="myModal" class="modal">
+						<span class="close">&times;</span>
+						<img class="modal-content" id="img01">
+						<div id="caption"></div>
+					</div>
+				</div>
+
+
+			</div>
+
+			<!-- Call JavaScript for the navbar -->
+			<script src="js/nav.js"></script>
+
+		</section>
+
+		<!-- JavaScript for modal images -->
+		<script>
+
+			// Get the modal
+			var modal = document.getElementById("myModal");
+			var i;
+
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			// var img = document.getElementById("myImg");
+			var img = document.getElementsByClassName("myImg");
+			var modalImg = document.getElementById("img01");
+				// Code for use on multiple images
+				for (i=0;i< img.length;i++)
+				{
+					img[i].onclick = function(){
+
+					modal.style.display = "block"
+						modalImg.src = this.src;
+						captionText.innerHTML = this.alt;
+					}
+				}
+
+			var captionText = document.getElementById("caption");
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			modal.style.display = "none";
+			}
+
+		</script>
+
+		<footer id="footer">
+
+			<!-- Footer content and contact link -->
+			<p>Designed and Engineered by Erik Long</p>
+			<a href="mailto:loneriw@dunwoody.edu">
+				<i class="fa fa-paw" style="font-size: 40px; color: black;"></i>				
+			</a>
+			<p style="font-family: myFont; font-size: 16px;">Click the paw to email</p>
+
+			<button onclick="topFunction()" id="myBtn" title="Go to the top of the page">Top</button>
+
+		</footer>
+
+	</body>
+
+</html>

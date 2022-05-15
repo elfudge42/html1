@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+		<!-- Meta tags -->
+		
+		<!-- Define the character set. -->
+		<meta charset="UTF-8">
+		
+		<!-- Set the keywords -->
+		<meta name="keywords" content="fix, fixing, right to repair, repairing, right-to-repair">
+		
+		<!-- Description -->
+		<meta name="description" content="final project - page 1/4: Home Page">
+		
+		<!-- Viewport settings -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		
+		<!-- Author -->
+		<meta name="author" content="Erik Long">
+	
+		<!-- Title -->
+		<title>Fixing Things - Home</title>
+
+		<!-- favicon -->
+		<link rel="icon" type="image/x-icon" href="images/hammer_and_spanner.png">
+		<!-- "Simple spanner and hammer isolated on white background Icon for apps and websites" by Eugene B-sov -->
+
+        <!-- link to external style sheet for page formatting -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- link to external style sheet for nav bar icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- colors: -->
+			<!-- http://paletton.com/#uid=62P1q0kf8nd6bzvaArSiqiGnDfd -->
+			<!-- primary -->
+				<!-- green: #4E944E = rgb( 78,148, 78) -->
+			<!-- ancillary -->
+				<!-- blue/purple: #574A7F = rgb( 87, 74,127), -->
+				<!-- tan/yellow: #B9AA62 = rgb(185,170, 98), -->
+				<!-- rose: #B96262 = rgb(185, 98, 98)*/ -->
+				<!-- background (maybe gray) - I found this -->
+				<!-- dark blue: #2A1D53 = rgb( 42, 29, 83) -->
+
+        <style>
+
+			/*Call the font family for the page*/
+			@font-face {
+				font-family: myFont;
+				src: url(fonts/KeepCalm-Medium.ttf);
+			}
+
+			/*Class/Name decoder for the grid*/
+			.item1 { grid-area: welcome; }
+			.item2 { grid-area: nav; }
+			.item3 { grid-area: pic1; }
+			.item4 { grid-area: main1; }
+			.item5 { grid-area: pic2; }
+			.item6 { grid-area: main2; }
+			.item7 { grid-area: pic3; }
+			.item8 { grid-area: main3; }
+
+			/*Configure and format the content grid*/
+			.grid-container {
+				display: grid;
+				grid-template-areas:
+				'welcome welcome welcome'
+				'pic1 main1 main1'
+				'pic2 main2 main2'
+				'pic3 main3 main3';
+				gap: 0px;
+				color: black;
+				/*float: left;*/
+				/*Added to accomodate side nav*/
+				margin-left: 25%;
+				float: right;
+			}
+
+			/*Formatting of the divs in the content grid*/
+			.grid-container > div {
+				background-color: #4f944e; /*green*/
+				text-align: left;
+				padding: 20px;
+				font-size: 14px;
+			}
+						
+			/* Container for the footer info and color-change button */
+			.flex-container {
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			/* Container for the footer info and color-change button */
+			.flex-container > div {
+				text-align: center;
+				max-width: 250px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			/* Left footer container */
+			.left-foot {
+				float: left;
+				padding: 10px;
+				}
+
+			/* Right footer container */
+			.right-foot {
+				float: right;
+				padding:  10px;
+				margin-top: 40px;
+			}
+
+			/* Responsive layout for side nav */
+			@media screen and (max-width: 768px) {
+				/* Remove side nav once the media query is active*/
+				.grid-container {
+				margin-left: 0%;
+				}
+	    	}
+
+        </style>
+
+	</head>
+
+	<body>
+
+		<header>
+
+			<!-- Logo container -->
+			<div class="logo-container">
+	        	<img src="images/long-logo.png" alt="LONG Enterprises logo">
+	        </div>
+
+	        <!-- Title text container -->
+	        <div class="title-container">
+	            <h1>Home</h1>        	
+	        </div>
+
+	        <!-- banner -->
+	        <img src="images/banner-tools.jpg" alt="peg-board full of tools">
+
+		</header>
+
+		<!-- Nav bar content and code for mobile -->
+		<div class="navbar" id="myTopnav">
+			<!-- This places the house icon for home -->
+			<a class="active" href="index.html">
+				<i class="fa fa-home"></i>
+			</a>
+			<a href="resources.html">Resources</a>
+			<a href="examples.html">Examples</a>
+			<a href="about.html">About</a>
+			
+			<!-- This places the "hamburger" icon, gives it a null link value, and opens the navbar drop-down on click -->
+			<a href="javascript:void(0);" class="icon" onclick="navBurgerFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+
+		<section>
+
+			<ul class="sidenav">
+				<li><a class="active" href="index.html">Home</a></li>
+				<li><a href="resources.html">Resources</a></li>
+				<li><a href="examples.html">Examples</a></li>
+				<li><a href="about.html">About</a></li>
+		    </ul>
+
+			<!-- This is the content grid -->
+			<div class="grid-container">
+
+			    <div class="item1"><h2 style="text-align: center;">Welcome to</h2><h2 style="text-align: center;">FIXING THINGS!</h2></div>
+
+				<div class="item3">
+					<img src="images/home/recycle.jpg" alt="image">
+				</div>
+
+			    <div class="item4">
+			        <h3>Mission Statement</h3>
+			        <p>The purpose of the Fixing Things Website is to promote the philosophy of repairing broken items and to enable others to learn how to fix by providing resources and guidance.</p>
+			    </div>
+
+				<div class="item5">
+					<img src="images/home/toolbox.jpg" alt="image">
+				</div>
+
+				<div class="item6">We want to equip you with the "tools" start you on your journey to becoming a Fixer.</div>
+
+				<div class="item7">
+					<img src="images/home/safety.jpg" alt="image">
+				</div>
+
+				<div class="item8">
+					<p>Safety First! </p>
+					<p>Then equipment, supplies, sources, and examples.</p>
+				</div>
+
+			</div>
+
+			<!-- Call JavaScript for the navbar -->
+			<script src="js/nav.js"></script>
+
+		</section>
+
+		<footer id="footer" class="flex-container">
+
+			<div class="left-foot">
+
+				<!-- Footer content and contact link -->
+				<p>Designed and Engineered by Erik Long</p>
+				<a href="mailto:loneriw@dunwoody.edu">
+					<i class="fa fa-paw" style="font-size: 40px; color: black;"></i>				
+				</a>
+				<p style="font-family: myFont; font-size: 16px;">Click the paw to email</p>
+			</div>
+
+			<div class="right-foot">
+
+                <script>
+					// Function for changing the background color
+					function myColorFunction() {
+					document.body.style.backgroundColor = "black"; }
+				</script>
+
+				<!-- Button to activate the background color change -->
+                <button type="button" onclick="myColorFunction()">CLICK FOR BLACK BACKGROUND</button>
+
+			</div>
+
+			<button onclick="topFunction()" id="myBtn" title="Go to the top of the page">Top</button>
+
+		</footer>
+
+	</body>
+
+</html>

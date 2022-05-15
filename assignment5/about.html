@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		
+        <!-- Meta tags -->
+		
+		<!-- Define the character set. -->
+		<meta charset="UTF-8">
+		
+		<!-- Set the keywords -->
+		<meta name="keywords" content="fix, fixing, right to repair, repairing, right-to-repair">
+		
+		<!-- Description -->
+		<meta name="description" content="final project - page 4/4: About Page">
+		
+		<!-- Viewport settings -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		
+		<!-- Author -->
+		<meta name="author" content="Erik Long">
+	
+		<!-- Title -->
+		<title>Fixing Things - About</title>
+
+		<!-- favicon -->
+		<link rel="icon" type="image/x-icon" href="images/hammer_and_spanner.png">
+		<!-- "Simple spanner and hammer isolated on white background Icon for apps and websites" by Eugene B-sov -->
+
+        <!-- link to external style sheet for page formatting -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- link to external style sheet for nav bar icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- colors: -->
+			<!-- http://paletton.com/#uid=62P1q0kf8nd6bzvaArSiqiGnDfd -->
+			<!-- primary -->
+				<!-- green: #4E944E = rgb( 78,148, 78) -->
+			<!-- ancillary -->
+				<!-- blue/purple: #574A7F = rgb( 87, 74,127), -->
+				<!-- tan/yellow: #B9AA62 = rgb(185,170, 98), -->
+				<!-- rose: #B96262 = rgb(185, 98, 98)*/ -->
+				<!-- dark blue: #2A1D53 = rgb( 42, 29, 83) -->
+
+        <style>
+
+			/*Call the font family for the page*/
+			@font-face {
+				font-family: myFont;
+				src: url(fonts/KeepCalm-Medium.ttf);
+			}
+
+			.content-container {
+				margin-left: 25%;
+			}
+
+			/* Format the links within p-tags */
+			p > a:link {
+				color: #B96262;
+				background-color: transparent;
+				text-decoration: none;
+			}
+
+			/* Format the links within p-tags */
+			p > a:visited {
+				color: #4E944E;
+				background-color: transparent;
+				text-decoration: none;
+			}
+
+			/* Format the links within p-tags */
+			p > a:hover {
+				color: #B9AA62;
+				background-color: transparent;
+				text-decoration: underline;
+			}
+
+			dt {
+				font-size: 20px;
+			}
+
+			dd {
+				line-height: 2;
+				font-size: 16px;
+			}
+
+			/* Responsive layout for side nav */
+			@media screen and (max-width: 768px) {
+				/* Remove side nav once the media query is active*/
+				.content-container {
+				margin-left: 0%;
+				}
+	    	}
+
+        </style>
+
+	</head>
+
+	<body>
+
+		<header>
+
+			<!-- Logo container -->
+			<div class="logo-container">
+	        	<img src="images/long-logo.png" alt="LONG Enterprises logo">
+	        </div>
+
+	        <!-- Title text container -->
+	        <div class="title-container">
+	            <h1>About</h1>        	
+	        </div>
+
+	        <!-- banner -->
+	        <img src="images/banner-tools.jpg" alt="peg-board full of tools">
+
+		</header>
+
+		<!-- Nav bar content and code for mobile -->
+		<div class="navbar" id="myTopnav">
+			<!-- This places the house icon for home -->
+			<a href="index.html">
+				<i class="fa fa-home"></i>
+			</a>
+			<a href="resources.html">Resources</a>
+			<a href="examples.html">Examples</a>
+			<a class="active" href="about.html">About</a>
+			
+			<!-- This places the "hamburger" icon and opens the hamburger drop-down on click -->
+			<a href="javascript:void(0);" class="icon" onclick="navBurgerFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+
+        <section>
+
+        	<!-- Side nav bar -->
+			<ul class="sidenav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="resources.html">Resources</a></li>
+				<li><a href="examples.html">Examples</a></li>
+				<li><a class="active" href="about.html">About</a></li>
+		    </ul>
+
+	        <div class="content-container">
+
+		        <h2>Introduction</h2>
+		        <p>A recent addition to environmentalism is the concept of <em>reparing</em> broken items.  The motivation to repair broken items is to keep them out of landfills and have them continue to perform their function so new items are not needed.  FixIt Clinics and Right to Repair are two manifestations of the fixing movement.</p>
+		        <p>FixIt Clinics bring together people with items that need repairing, but who do not have the ability to fix the items,  with volunteers who have the knowledge, skills, and capability to fix.</p>
+		        <p><a href="https://en.wikipedia.org/wiki/Right_to_repair" target="_blank">Right to Repair</a> is a movement to ensure products can be repaired instead of discarded.  <a href="https://www.repair.org/" target="_blank">repair.org</a> is a leader in bringing this issue to our government.</p>
+
+		        <br>
+
+		        <h2>Philosophy</h2>
+		        <p>The philosophy of fixing broken items has several goals:</p>       
+		        <ul>
+		            <li>Reduce waste by preventing broken items from being discarded</li>
+		            <li>Save people money so they do not have to buy another item to replace the broken item</li>
+		            <li>In turn, a new item does not need to be produced by industry, saving materials and energy</li>
+		            <li>Educate people to learn how to repair broken items</li>
+		            <li>Change people's view of products
+		        </ul>
+		        <br>
+
+
+		        <h2>The 7 Rs</h2>
+		        <p>The mantra of "Reduce, Reuse, Recycle" has evolved.</p>
+		        <p>Added to the beginning of the process are Rethink and Refuse to further prevent waste.</p>
+		        <p>Repair and Repurpose were added to delay waste before items are Recycled.</p>
+
+		        <img src="images/about/seven-rs.jpg" alt="7 Rs" style="width: 100%;">
+
+		        <dl>
+		        	<dt>Rethink</dt>
+		        	<dd>Change how we live</dd>
+		        	<dt>Refuse</dt>
+		        	<dd>Avoid using disposable items</dd>
+		            <dt>Reduce</dt>
+		        	<dd>Use fewer disposable items</dd>
+		        	<dt>Reuse</dt>
+		        	<dd>Use items multiple times</dd>
+		        	<dt>Repair</dt>
+		        	<dd>Fix broken items to extend their useful life instead of disposing of them</dd>
+		            <dt>Repurpose</dt>
+		        	<dd>Think of other ways to use items that can no longer perform their original function</dd>
+		        	<dt>Recycle</dt>
+		        	<dd>Lastly, recycle items to keep them out of landfills and put their materials back into use</dd>	        	
+		        </dl>
+
+		    </div>
+
+			<!-- Call JavaScript for the navbar -->
+			<script src="js/nav.js"></script>
+
+        </section>
+
+		<footer id="footer">
+
+			<!-- Footer content and contact link -->
+			<p>Designed and Engineered by Erik Long</p>
+			<a href="mailto:loneriw@dunwoody.edu">
+				<i class="fa fa-paw" style="font-size: 40px; color: black;"></i>				
+			</a>
+			<p style="font-family: myFont; font-size: 16px;">Click the paw to email</p>
+
+			<button onclick="topFunction()" id="myBtn" title="Go to the top of the page">Top</button>
+
+		</footer>
+
+	</body>
+
+</html>
