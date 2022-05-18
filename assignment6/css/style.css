@@ -1,0 +1,229 @@
+
+/*Body formatting*/
+body {
+	margin: 0;
+	background-color: black;
+	color: #f3e1bc;
+	font-family: myFont;
+
+	/*This code keeps the footer from taking over the body*/
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/*Section formatting*/
+section {
+	padding: 25px;
+	height: 100%;
+}
+
+/*Image parameters*/
+img { 
+	max-width: 100%;				
+}
+
+/*h1 heading format*/
+h1 {
+	font-size: 50px;				
+}
+
+/*Formatting for logo container*/
+.logo-container {
+	float: left;
+	max-width: 20%;
+	margin-bottom: 10px;
+	padding: 20px;
+}
+
+/*Formatting for title container*/
+.title-container {
+	width: 61%;
+	float: right;
+	text-align: right;
+	margin-top: 10px;
+	padding: 20px;
+}
+
+/*Formatting for banner container*/
+.banner-container {
+	margin-top:5px;
+	float: left;
+	text-align: center;
+	font-size: 50px;
+	background-color: #B96262; /*rose*/
+	color: #B9AA62; /*tan*/
+	padding: 0px;
+	width: 95%;
+}
+
+/*Formatting for sticky nav bar*/
+.sticky {
+	position: sticky;
+	top: 0;
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+}
+
+/*footer formatting*/
+#footer {
+	background-color: #B9AA62; /*tan*/
+	padding: 10px;
+	text-align: center;
+	color: black;
+	border: solid 1px white;
+
+	/*This prevents the footer from taking over the body*/
+	/*along with the code in the body tag*/
+	margin-top: auto;
+}
+
+/* Side nav code */
+ul.sidenav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 20%;
+	background-color: #B9AA62;
+	position: absolute;
+	float: left;
+}
+
+ul.sidenav li a {
+	display: block;
+	color: #000000;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+ul.sidenav li a.active {
+	background-color: #574A7F;
+	color: #FFFFFF;
+}
+
+ul.sidenav li a:hover:not(.active) {
+	background-color: #A099B8;
+	color: white;
+}
+
+/* Keep the sticky nav bar from displaying until the media queries are active*/
+.navbar {
+	display: none;
+}
+
+#myBtn {
+  position: relative; /* Fixed/sticky position */
+  bottom: 0px; /* Place the button at the bottom of the page */
+  right: 10px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #2A1D53; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  float: right;
+}
+
+#myBtn:hover {
+  background-color: #B96262; /* Change background on hover */
+}
+
+/* Responsive layout */
+@media screen and (max-width: 1024px) {
+    /* Remove side nav once the media query is active*/
+    body {
+	    background-color: #2A1D53; /*purple*/
+    }
+
+/* Responsive layout for side nav */
+@media screen and (max-width: 768px) {
+    /* Remove side nav once the media query is active*/
+    ul.sidenav {
+    	display: none;
+    	width: 0%;
+    }
+
+	/*The gives the sticky nav cleaner behavior on scrolling*/
+	.sticky + section {
+		padding-top: 20px;				
+	}
+
+    /* Nav bar formatting */
+	.navbar {
+		display: block;
+		list-style-type: none;
+		margin-top: 0px;
+		padding: 0px;
+		background-color: #B9AA62; /*tan*/
+		height: auto;
+		overflow: hidden;
+		top: 0px;
+		z-index: 10;
+		border: solid 1px white;
+		position: sticky;
+	}
+
+	/*Formatting for nav bar links*/
+	.navbar a {
+		float: left;
+		display: block;
+		padding: 10px;
+		color: #000000;
+		padding: 8px 16px;
+		text-decoration: none;
+		text-align: center;
+	}
+
+	/*Format for hovering over inactive nav link*/
+	.navbar a:hover:not(.active) {
+		background-color: #A099B8;
+		color: #FFFFFF;			
+	}
+
+	/*Format for the active nav link*/
+	.navbar a.active {
+		background-color: #574A7F;
+		color: #FFFFFF;
+	}
+
+	/*Formatting for mobile nav*/
+	.navbar .icon {
+		display: none;				
+	}
+
+}
+
+/*This section is for the mobile hamburger menu*/
+@media screen and (max-width: 600px) {
+
+	.navbar a:not(:first-child) {display: none;}
+
+	.navbar a.icon {
+		float: right;
+		display: block;
+	}
+
+	.navbar.responsive {
+		position: sticky;
+	}
+
+	/* Keeps the hamburger icon on the right side of the nav bar */
+	.navbar.responsive .icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	/* Makes the navbar links drop down */
+	.navbar.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+}
+

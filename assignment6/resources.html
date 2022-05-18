@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		
+        <!-- Meta tags -->
+		
+		<!-- Define the character set. -->
+		<meta charset="UTF-8">
+		
+		<!-- Set the keywords -->
+		<meta name="keywords" content="fix, fixing, right to repair, repairing, right-to-repair">
+		
+		<!-- Description -->
+		<meta name="description" content="final project - page 2/4: Resources Page">
+		
+		<!-- Viewport settings -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		
+		<!-- Author -->
+		<meta name="author" content="Erik Long">
+	
+		<!-- Title -->
+		<title>Fixing Things - Resources</title>
+
+		<!-- favicon -->
+		<link rel="icon" type="image/x-icon" href="images/hammer_and_spanner.png">
+		<!-- "Simple spanner and hammer isolated on white background Icon for apps and websites" by Eugene B-sov -->
+
+        <!-- link to external style sheet for page formatting -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- link to external style sheet for nav bar icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- colors: -->
+			<!-- http://paletton.com/#uid=62P1q0kf8nd6bzvaArSiqiGnDfd -->
+			<!-- primary -->
+				<!-- green: #4E944E = rgb( 78,148, 78) -->
+			<!-- ancillary -->
+				<!-- blue/purple: #574A7F = rgb( 87, 74,127), -->
+				<!-- tan/yellow: #B9AA62 = rgb(185,170, 98), -->
+				<!-- rose: #B96262 = rgb(185, 98, 98)*/ -->
+				<!-- background (maybe gray) - I found this -->
+				<!-- dark blue: #2A1D53 = rgb( 42, 29, 83) -->
+
+        <style>
+
+			/*Call the font family for the page*/
+			@font-face {
+				font-family: myFont;
+				src: url(fonts/KeepCalm-Medium.ttf);
+			}
+
+			.content-container {
+				margin-left: 25%;
+			}
+
+			/*.center {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 50%;
+			}*/
+
+            figure > img {            	
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+
+			figcaption {
+				margin-top: 75px;
+				text-align: left;
+				font-size: 48px;
+			}
+
+			/* Format the links within p-tags */
+			p > a:link {
+				color: #B96262;
+				background-color: transparent;
+				text-decoration: none;
+			}
+
+			/* Format the links within p-tags */
+			p > a:visited {
+				color: #4E944E;
+				background-color: transparent;
+				text-decoration: none;
+			}
+
+			/* Format the links within p-tags */
+			p > a:hover {
+				color: #B9AA62;
+				background-color: transparent;
+				text-decoration: underline;
+			}
+
+			/* Responsive layout for side nav */
+			@media screen and (max-width: 768px) {
+				/* Remove side nav once the media query is active*/
+				.content-container {
+				margin-left: 0%;
+				}
+	    	}
+
+        </style>
+
+	</head>
+
+	<body>
+
+		<header>
+
+			<!-- Logo container -->
+			<div class="logo-container">
+	        	<img src="images/long-logo.png" alt="LONG Enterprises logo">
+	        </div>
+
+	        <!-- Title text container -->
+	        <div class="title-container">
+	            <h1>Resources</h1>        	
+	        </div>
+
+	        <!-- banner -->
+	        <img src="images/banner-tools.jpg" alt="peg-board full of tools">
+
+		</header>
+
+		<!-- Nav bar content and code for mobile -->
+		<div class="navbar" id="myTopnav">
+			<!-- This places the house icon for home -->
+			<a href="index.html">
+				<i class="fa fa-home"></i>
+			</a>
+			<a class="active" href="resources.html">Resources</a>
+			<a href="examples.html">Examples</a>
+			<a href="about.html">About</a>
+			
+			<!-- This places the "hamburger" icon and opens the hamburger drop-down on click -->
+			<a href="javascript:void(0);" class="icon" onclick="navBurgerFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+
+		<section>
+
+            <!-- Side nav bar -->
+			<ul class="sidenav">
+				<li><a href="index.html">Home</a></li>
+				<li><a class="active" href="resources.html">Resources</a></li>
+				<li><a href="examples.html">Examples</a></li>
+				<li><a href="about.html">About</a></li>
+		    </ul>
+
+			<div class="content-container">
+
+	          <h2>Getting into Fixing</h2>
+	          <p>The content below will help you on your way to fixing.</p>
+
+			  <figure>
+			  	<figcaption>Safety</figcaption>
+			  	<p>As always, Safety is first.  Never do anything you are not comfortable doing.  Electricity, moving parts, and sharp surfaces are risks during fixing.  Make sure to wear the right protective equipment.  Safety glasses, ear plugs, and gloves are important gear to have and use.</p>
+			  	<img src="images/resources/safety.jpg" alt="image of safety equipment" class="center">
+			  	<p><a href="https://www.google.com/" target="_blank">Google</a> your local hardware store for safety equipment.</p>
+			  	<p><a href="https://www.mcmaster.com/" target="_blank">McMaster-Carr</a> has all the safety gear you will ever need.</p>
+			  </figure>
+
+			  <figure>
+			  	<figcaption>How-To Sites</figcaption>
+			  	<p>There are many resources for figuring out how to fix something.  Whether you like to see a video or read the step-by-step instructions, it is not hard to find what you need. </p>
+			  	<img src="images/resources/youtube.jpg" alt="image of YouTube logo" class="center">
+			  	<p><a href="https://www.ifixit.com/" target="_blank">IFIXIT</a> is a fixing-specific site with great information to help you fix items.</p>
+			  	<p><a href="https://www.google.com/" target="_blank">Google</a> can provide good results.</p>	  	
+			  	<p><a href="https://www.youtube.com/" target="_blank">YouTube</a> is also a great resource.</p>
+			  	<p><a href="https://www.youtube.com/channel/UCEf0329s-8QRbZR6Nximcmg/" target="_blank">Twin Cities Fix-It Clinics - Volunteer Vids</a> are great examples of what you can do as a fixer.</p>			  	
+			  </figure>
+
+			  <figure>
+			  	<figcaption>Supplies</figcaption>
+			  	<p>You will need a variety of supplies to fix items.  Batteries, fuses, wire, tape, and glue are common items.  Start a kit and expand as you need.</p>
+			  	<img src="images/resources/supplies.jpg" alt="image of link" class="center">			  	
+			  	<p><a href="https://www.target.com/" target="_blank">Target</a> has basic items for fixing.</p>
+			  	<p><a href="https://www.mcmaster.com/" target="_blank">McMaster-Carr</a> has everything to fix anything.</p>			  	
+			  </figure>
+
+			  <figure>
+			  	<figcaption>Parts</figcaption>
+			  	<p>Fixes can require specific parts to get something working again.  The best source is usually the manufacturer, but other options are available.</p>
+			  	<img src="images/resources/brands.jpg" alt="image of link" class="center">
+			  	<p><a href="https://www.ebay.com/" target="_blank">ebay</a> can be a source of obscure part and part at a lower cost.</p>
+			  	<p><a href="https://www.mcmaster.com/" target="_blank">McMaster-Carr</a> has many general parts, available quick, but at a slightly higher cost.</p>
+			  	<p><a href="https://www.google.com/" target="_blank">Google</a> is always a good resource for finding what you need.</p>
+			  </figure>
+
+			  <figure>
+			  	<figcaption>Tools</figcaption>
+			  	<p>Tools are necessary for fixing items.  A set of basic tools (screw drivers, spudgers, wrenches, and pliers) can go a long way.  As you progress in fixing, your tool box will fill up.  Quality tools will last a lifetime of reliable service. </p>
+			  	<img src="images/resources/tools.jpg" alt="image of link" class="center">			  	
+			  	<p><a href="https://www.craftsman.com/" target="_blank">Craftsman</a> is my favorite tool brand.</p>
+			  	<p><a href="https://www.stanleytools.com/" target="_blank">Stanley</a> and other name brands are very good and are priced reasonably.</p>
+			  	<p><a href="https://www.mcmaster.com/" target="_blank">McMaster-Carr</a> has a huge selection of basic and unique tools.</p>
+			  </figure>
+
+			  <figure>
+			  	<figcaption>Volunteering</figcaption>
+			  	<p>Once you feel comfortable with a variety of fixes, think about volunteering.  You can help others fix their broken items and help them become a Fixer themselves!  FixIt Clinics and fixing groups/clubs are all over the world.  Take a look to find one near you.</p>
+			  	<img src="images/resources/hennepin-county.jpg" alt="image of Hennepin County MN logo" class="center">			  	
+			  	<p><a href="https://www.hennepin.us/fixitclinic" target="_blank">Hennepin County Fix-It Clinic</a> was one of the first in the nation.  </p>
+			  	<p><a href="https://www.google.com/" target="_blank">Google</a> to a FixIt Clinic near you or anywhere in the world!</p>
+			  </figure>
+
+			</div>
+
+			<!-- Call JavaScript for the navbar -->
+			<script src="js/nav.js"></script>
+
+		</section>
+	
+		<footer id="footer">
+
+			<!-- Footer content and contact link -->
+			<p>Designed and Engineered by Erik Long</p>
+			<a href="mailto:loneriw@dunwoody.edu">
+				<i class="fa fa-paw" style="font-size: 40px; color: black;"></i>				
+			</a>
+			<p style="font-family: myFont; font-size: 16px;">Click the paw to email</p>
+
+			<button onclick="topFunction()" id="myBtn" title="Go to the top of the page">Top</button>
+
+		</footer>
+
+	</body>
+
+</html>
